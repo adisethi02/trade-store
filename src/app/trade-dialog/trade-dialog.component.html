@@ -1,0 +1,32 @@
+<mat-form-field>
+  <mat-label>tradeId</mat-label>
+  <input matInput cdkFocusInitial [(ngModel)]="data.trade.tradeId" />
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Version</mat-label>
+  <input matInput cdkFocusInitial [(ngModel)]="data.trade.version" />
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Booking Id</mat-label>
+  <input matInput cdkFocusInitial [(ngModel)]="data.trade.bookId" />
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Counter Party Id</mat-label>
+  <input matInput cdkFocusInitial [(ngModel)]="data.trade.counterPartyId" />
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Maturity Date</mat-label>
+  <input matInput [matDatepicker]="picker1" [(ngModel)]="data.trade.maturityDate">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+  <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="{ trade: data.trade }">OK</button>
+  <button mat-button (click)="cancel()">Cancel</button>
+</div>

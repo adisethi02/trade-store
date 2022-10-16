@@ -1,0 +1,7 @@
+mat-toolbar > button{
+  margin-left: auto;
+}
+
+mat-toolbar > span {
+  margin-left: 10px;
+}
